@@ -49,17 +49,20 @@
         },
         "precio": 1000
     },
-  {
-  "id": "camiseta-01",
-  "titulo": "Camiseta 01",
-  "categoria": { "nombre": "Camisetas", "id": "camisetas" },
-  "precio": 1000,
-  "imagenes": [
-    "./img/camisetas/01.jpg",
-    "./img/camisetas/02.jpg",
-    "./img/camisetas/03.jpg"
-  ]
-},
+    {
+        "id": "camiseta-01",
+        "titulo": "Camiseta 01",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 1000,
+        "imagenes": [
+            "./img/camisetas/01.jpg",
+            "./img/camisetas/02.jpg",
+            "./img/camisetas/03.jpg"
+        ]
+    },
     {
         "id": "camiseta-02",
         "titulo": "Camiseta 02",
