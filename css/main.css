@@ -506,3 +506,20 @@ main {
 @supports not (aspect-ratio: 1 / 1){
   .producto .producto-imagen{ height: 260px; }
 }
+
+/* Marco fijo para las fotos (mismo tamaño siempre) */
+:root{ --ratio-producto: 4/5; } /* usa 1/1 si prefieres cuadrado */
+
+.producto .producto-imagen{ position: relative; width: 100%; aspect-ratio: var(--ratio-producto); border-radius: 1rem; overflow: hidden; background: #f2f2f2; }
+.producto .producto-imagen .carrusel{ position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.producto .producto-imagen .carrusel img{ width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.producto .producto-imagen .carrusel .prev,
+.producto .producto-imagen .carrusel .next{ position: absolute; top: 50%; transform: translateY(-50%); border: 0; background: rgba(0,0,0,.45); color:#fff; width:32px; height:32px; border-radius:50%; }
+.producto .producto-imagen .carrusel .prev{ left:8px; } .producto .producto-imagen .carrusel .next{ right:8px; }
+
+@supports not (aspect-ratio: 1 / 1){ .producto .producto-imagen{ height: 260px; } }
+
+/* Selector de talla */
+.fila-titulo-talla{ display:flex; align-items:center; justify-content:space-between; gap:.5rem; }
+.select-talla{ padding:.25rem .5rem; border:1px solid var(--clr-gray); border-radius:.5rem; background:#fff; font-weight:600; min-width:64px; }
+@media (max-width:600px){ .fila-titulo-talla{ gap:.75rem; } .producto-titulo{ flex:1 1 auto; } }

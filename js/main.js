@@ -7,7 +7,6 @@ const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 const numerito = document.querySelector("#numerito");
-const aside = document.querySelector("aside"); // para cerrar el menú en mobile
 
 // --- Init numerito al cargar ---
 actualizarNumerito();
@@ -27,17 +26,17 @@ fetch("./js/productos.json")
   })
   .catch(err => console.error("Error cargando productos.json:", err));
 
-// =================== Renderización ===================
+// ================ Renderización ================
 function cargarProductos(lista) {
   contenedorProductos.innerHTML = "";
 
   lista.forEach(producto => {
-    const dots = (producto.imagenes || [])
+    const imgs = producto.imagenes || [];
+    const hayVariantes = imgs.length > 1;
+
+    const dots = imgs
       .map((_, i) => `<span class="dot ${i === 0 ? "active" : ""}" data-i="${i}"></span>`)
       .join("");
-
-    // Si solo hay 1 imagen, ocultamos flechas
-    const hayVariantes = producto.imagenes && producto.imagenes.length > 1;
 
     const div = document.createElement("div");
     div.className = "producto";
@@ -45,14 +44,23 @@ function cargarProductos(lista) {
       <div class="producto-imagen">
         <div class="carrusel" data-id="${producto.id}">
           <button class="prev" aria-label="Imagen anterior" ${!hayVariantes ? "disabled" : ""}>&#10094;</button>
-          <img src="${producto.imagenes[0] || ""}" data-index="0" class="img-producto producto-imagen" alt="${producto.titulo}">
+          <img src="${imgs[0] || ""}" data-index="0" class="img-producto producto-imagen" alt="${producto.titulo}">
           <button class="next" aria-label="Imagen siguiente" ${!hayVariantes ? "disabled" : ""}>&#10095;</button>
         </div>
         <div class="dots">${dots}</div>
       </div>
 
       <div class="producto-detalles">
-        <h3 class="producto-titulo">${producto.titulo}</h3>
+        <div class="fila-titulo-talla">
+          <h3 class="producto-titulo">${producto.titulo}</h3>
+          <select class="select-talla" aria-label="Talla">
+            <option value="S">S</option>
+            <option value="M" selected>M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+
         <p class="producto-precio">$${producto.precio}</p>
         <button class="producto-agregar" id="${producto.id}">Agregar</button>
       </div>
@@ -63,15 +71,15 @@ function cargarProductos(lista) {
   wireAgregar();
 }
 
-// =================== Categorías ===================
+// ================ Categorías ================
 botonesCategorias.forEach(boton => {
   boton.addEventListener("click", (e) => {
     // UI active
     botonesCategorias.forEach(b => b.classList.remove("active"));
     e.currentTarget.classList.add("active");
 
-    // Cerrar menú lateral en mobile
-    if (aside) aside.classList.remove("aside-visible");
+    // Cerrar menú lateral en mobile (no redeclaramos 'aside' para evitar choques con menu.js)
+    document.querySelector("aside")?.classList.remove("aside-visible");
 
     if (e.currentTarget.id !== "todos") {
       const ejemplo = productos.find(p => p.categoria?.id === e.currentTarget.id);
@@ -85,18 +93,25 @@ botonesCategorias.forEach(boton => {
   });
 });
 
-// =================== Agregar al carrito ===================
+// ================ Agregar al carrito ================
 function wireAgregar() {
-  const botonesAgregar = document.querySelectorAll(".producto-agregar");
-  botonesAgregar.forEach(b => b.addEventListener("click", agregarAlCarrito));
+  document.querySelectorAll(".producto-agregar").forEach(b =>
+    b.addEventListener("click", agregarAlCarrito)
+  );
 }
 
 function agregarAlCarrito(e) {
   const id = e.currentTarget.id;
+  const card = e.currentTarget.closest(".producto");
+  const tallaSel = card?.querySelector(".select-talla");
+  const talla = tallaSel ? tallaSel.value : "M";
+
   const producto = productos.find(p => p.id === id);
   if (!producto) return;
 
-  const existente = productosEnCarrito.find(p => p.id === id);
+  // combinación única por id + talla
+  const existente = productosEnCarrito.find(p => p.id === id && p.talla === talla);
+
   if (existente) {
     existente.cantidad++;
   } else {
@@ -105,6 +120,7 @@ function agregarAlCarrito(e) {
       titulo: producto.titulo,
       precio: producto.precio,
       imagen: (producto.imagenes && producto.imagenes[0]) || producto.imagen || "",
+      talla,
       cantidad: 1
     });
   }
@@ -115,18 +131,18 @@ function agregarAlCarrito(e) {
   // Toast
   if (window.Toastify) {
     Toastify({
-      text: "Producto agregado",
+      text: `Agregado: ${producto.titulo} - Talla ${talla}`,
       duration: 2500,
       close: true,
       gravity: "top",
       position: "right",
       stopOnFocus: true,
-        style: {
-            background: "linear-gradient(to right, var(--clr-main), var(--clr-main-light))",
-            borderRadius: "2rem",
-            textTransform: "uppercase",
-            fontSize: ".75rem"
-        },
+      style: {
+        background: "linear-gradient(to right, var(--clr-main), var(--clr-main-light))",
+        borderRadius: "2rem",
+        textTransform: "uppercase",
+        fontSize: ".75rem"
+      },
       offset: { x: '1.5rem', y: '1.5rem' }
     }).showToast();
   }
@@ -137,8 +153,8 @@ function actualizarNumerito() {
   if (numerito) numerito.innerText = n;
 }
 
-// =================== Carrusel (flechas + dots) ===================
-// Usamos delegación para no reatachar listeners tras cada render
+// ================ Carrusel (flechas + dots) ================
+// Delegación para no reatachar listeners tras cada render
 function wireCarruseles() {
   document.addEventListener("click", (e) => {
     // Flechas
@@ -167,7 +183,7 @@ function wireCarruseles() {
       return;
     }
 
-    // Puntitos
+    // Dots
     if (e.target.classList.contains("dot")) {
       const dot = e.target;
       const idx = Number(dot.dataset.i);
