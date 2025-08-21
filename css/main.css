@@ -449,3 +449,60 @@ main {
 .dot.active {
   background: #e74c3c;
 }
+
+/* === Marco fijo para las fotos del producto === */
+:root{
+  /* Cambia 4/5 por 1/1 si prefieres cuadrado */
+  --ratio-producto: 4/5;
+}
+
+/* contenedor de la imagen dentro de la card */
+.producto .producto-imagen{
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ratio-producto); /* altura automática según ancho */
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #f2f2f2; /* por si tarda en cargar */
+}
+
+/* el carrusel ocupa todo el marco */
+.producto .producto-imagen .carrusel{
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* la imagen siempre mismo tamaño: llena el marco */
+.producto .producto-imagen .carrusel img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* recorta sin deformar */
+  object-position: center;  /* centrado del recorte */
+  display: block;
+  border-radius: 0;         /* ya recorta el contenedor */
+}
+
+/* flechas posicionadas sobre el marco */
+.producto .producto-imagen .carrusel button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.producto .producto-imagen .carrusel .prev{ left: 8px; }
+.producto .producto-imagen .carrusel .next{ right: 8px; }
+
+/* fallback por si algún navegador no soporta aspect-ratio */
+@supports not (aspect-ratio: 1 / 1){
+  .producto .producto-imagen{ height: 260px; }
+}

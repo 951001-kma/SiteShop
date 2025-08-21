@@ -1,186 +1,940 @@
 [
     {
-        "id": "abrigo-01",
-        "titulo": "Abrigo 01",
-        "imagen": "./img/abrigos/01.jpg",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "abrigo-02",
-        "titulo": "Abrigo 02",
-        "imagen": "./img/abrigos/02.jpg",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "abrigo-03",
-        "titulo": "Abrigo 03",
-        "imagen": "./img/abrigos/03.jpg",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "abrigo-04",
-        "titulo": "Abrigo 04",
-        "imagen": "./img/abrigos/04.jpg",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "abrigo-05",
-        "titulo": "Abrigo 05",
-        "imagen": "./img/abrigos/05.jpg",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 1000
-    },
-    {
-        "id": "camiseta-01",
-        "titulo": "Camiseta 01",
-        "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
-        },
-        "precio": 1000,
+        "id": "casaca-01",
+        "titulo": "Casaca 01",
+        "imagen": "./img/Casacas/cs01.png",
         "imagenes": [
-            "./img/camisetas/01.jpg",
-            "./img/camisetas/02.jpg",
-            "./img/camisetas/03.jpg"
-        ]
+            "./img/Casacas/cs01.png",
+            "./img/Casacas/cs01-01.png"
+        ],
+        "categoria": {
+            "nombre": "casacas",
+            "id": "casacas"
+        },
+        "precio": 120
     },
     {
-        "id": "camiseta-02",
-        "titulo": "Camiseta 02",
-        "imagen": "./img/camisetas/02.jpg",
+        "id": "casaca-02",
+        "titulo": "Casaca 02",
+        "imagen": "./img/Casacas/cs02.png",
+        "imagenes": [
+            "./img/Casacas/cs02.png",
+            "./img/Casacas/cs02-02.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "casacas",
+            "id": "casacas"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "camiseta-03",
-        "titulo": "Camiseta 03",
-        "imagen": "./img/camisetas/03.jpg",
+        "id": "chompah-01",
+        "titulo": "Chompa Hombre 01",
+        "imagen": "./img/ChompasHombres/01.png",
+        "imagenes": [
+            "./img/ChompasHombres/01.png",
+            "./img/ChompasHombres/01-02.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "chompashombres",
+            "id": "chompashombres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "camiseta-04",
-        "titulo": "Camiseta 04",
-        "imagen": "./img/camisetas/04.jpg",
+        "id": "chompah-02",
+        "titulo": "Chompa Hombre 02",
+        "imagen": "./img/ChompasHombres/02.png",
+        "imagenes": [
+            "./img/ChompasHombres/02.png",
+            "./img/ChompasHombres/02-02.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "chompashombres",
+            "id": "chompashombres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "camiseta-05",
-        "titulo": "Camiseta 05",
-        "imagen": "./img/camisetas/05.jpg",
+        "id": "chompah-03",
+        "titulo": "Chompa Hombre 03",
+        "imagen": "./img/ChompasHombres/03.png",
+        "imagenes": [
+            "./img/ChompasHombres/03.png",
+            "./img/ChompasHombres/03-03.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "chompashombres",
+            "id": "chompashombres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "camiseta-06",
-        "titulo": "Camiseta 06",
-        "imagen": "./img/camisetas/06.jpg",
+        "id": "chompah-04",
+        "titulo": "Chompa Hombre 04",
+        "imagen": "./img/ChompasHombres/04.png",
+        "imagenes": [
+            "./img/ChompasHombres/04.png",
+            "./img/ChompasHombres/04-04.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "chompashombres",
+            "id": "chompashombres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "camiseta-07",
-        "titulo": "Camiseta 07",
-        "imagen": "./img/camisetas/07.jpg",
+        "id": "chompah-05",
+        "titulo": "Chompa Hombre 05",
+        "imagen": "./img/ChompasHombres/05.png",
+        "imagenes": [
+            "./img/ChompasHombres/05.png",
+            "./img/ChompasHombres/05-05.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "chompashombres",
+            "id": "chompashombres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "camiseta-08",
-        "titulo": "Camiseta 08",
-        "imagen": "./img/camisetas/08.jpg",
+        "id": "chompah-06",
+        "titulo": "Chompa Hombre 06",
+        "imagen": "./img/ChompasHombres/06.png",
+        "imagenes": [
+            "./img/ChompasHombres/06.png",
+            "./img/ChompasHombres/06-06.png"
+        ],
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "chompashombres",
+            "id": "chompashombres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "pantalon-01",
-        "titulo": "Pantalón 01",
-        "imagen": "./img/pantalones/01.jpg",
+        "id": "chompam-01",
+        "titulo": "Chompa Mujer 01",
+        "imagen": "./img/ChompasMujeres/cm01.png",
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "chompasmujeres",
+            "id": "chompasmujeres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "pantalon-02",
-        "titulo": "Pantalón 02",
-        "imagen": "./img/pantalones/02.jpg",
+        "id": "chompam-01",
+        "titulo": "Chompa Mujer 01",
+        "imagen": "./img/ChompasMujeres/cm01.png",
+        "imagenes": [
+            "./img/ChompasMujeres/cm01.png",
+            "./img/ChompasMujeres/cm01-01.png"
+        ],
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "chompasmujeres",
+            "id": "chompasmujeres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "pantalon-03",
-        "titulo": "Pantalón 03",
-        "imagen": "./img/pantalones/03.jpg",
+        "id": "chompam-02",
+        "titulo": "Chompa Mujer 02",
+        "imagen": "./img/ChompasMujeres/cm02.png",
+        "imagenes": [
+            "./img/ChompasMujeres/cm02.png",
+            "./img/ChompasMujeres/cm02-02.png"
+        ],
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "chompasmujeres",
+            "id": "chompasmujeres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "pantalon-04",
-        "titulo": "Pantalón 04",
-        "imagen": "./img/pantalones/04.jpg",
+        "id": "chompam-03",
+        "titulo": "Chompa Mujer 03",
+        "imagen": "./img/ChompasMujeres/cm03.png",
+        "imagenes": [
+            "./img/ChompasMujeres/cm03.png",
+            "./img/ChompasMujeres/cm03-03.png"
+        ],
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "chompasmujeres",
+            "id": "chompasmujeres"
         },
-        "precio": 1000
+        "precio": 120
     },
     {
-        "id": "pantalon-05",
-        "titulo": "Pantalón 05",
-        "imagen": "./img/pantalones/05.jpg",
+        "id": "ninos-01",
+        "titulo": "Niños 01",
+        "imagen": "./img/Kids/k01.png",
+        "imagenes": [
+            "./img/Kids/k01.png",
+            "./img/Kids/k01-01.png"
+        ],
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "ninos",
+            "id": "ninos"
         },
-        "precio": 1000
+        "precio": 120
+    },
+    {
+        "id": "ninos-02",
+        "titulo": "Niños 02",
+        "imagen": "./img/Kids/k02.png",
+        "imagenes": [
+            "./img/Kids/k02.png",
+            "./img/Kids/k02-02.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-03",
+        "titulo": "Niños 03",
+        "imagen": "./img/Kids/k03.png",
+        "imagenes": [
+            "./img/Kids/k03.png",
+            "./img/Kids/k03-03.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-04",
+        "titulo": "Niños 04",
+        "imagen": "./img/Kids/k04.png",
+        "imagenes": [
+            "./img/Kids/k04.png",
+            "./img/Kids/k04-04.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-05",
+        "titulo": "Niños 05",
+        "imagen": "./img/Kids/k05.png",
+        "imagenes": [
+            "./img/Kids/k05.png",
+            "./img/Kids/k05-05.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-06",
+        "titulo": "Niños 06",
+        "imagen": "./img/Kids/k06.png",
+        "imagenes": [
+            "./img/Kids/k06.png",
+            "./img/Kids/k06-06.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-07",
+        "titulo": "Niños 07",
+        "imagen": "./img/Kids/k07.png",
+        "imagenes": [
+            "./img/Kids/k07.png",
+            "./img/Kids/k07-07.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-08",
+        "titulo": "Niños 08",
+        "imagen": "./img/Kids/k08.png",
+        "imagenes": [
+            "./img/Kids/k08.png",
+            "./img/Kids/k08-08.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-09",
+        "titulo": "Niños 09",
+        "imagen": "./img/Kids/k09.png",
+        "imagenes": [
+            "./img/Kids/k09.png",
+            "./img/Kids/k09-09.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-10",
+        "titulo": "Niños 10",
+        "imagen": "./img/Kids/k10.png",
+        "imagenes": [
+            "./img/Kids/k10.png",
+            "./img/Kids/k10-10.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-11",
+        "titulo": "Niños 11",
+        "imagen": "./img/Kids/k11.png",
+        "imagenes": [
+            "./img/Kids/k11.png",
+            "./img/Kids/k11-11.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-13",
+        "titulo": "Niños 13",
+        "imagen": "./img/Kids/k13.png",
+        "imagenes": [
+            "./img/Kids/k13.png",
+            "./img/Kids/k13-13.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ninos-14",
+        "titulo": "Niños 14",
+        "imagen": "./img/Kids/k14.png",
+        "imagenes": [
+            "./img/Kids/k14.png",
+            "./img/Kids/k14-14.png"
+        ],
+        "categoria": {
+            "nombre": "ninos",
+            "id": "ninos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "manta-01",
+        "titulo": "Manta 01",
+        "imagen": "./img/Mantas/m01.png",
+        "imagenes": [
+            "./img/Mantas/m01.png",
+            "./img/Mantas/m01-01.png"
+        ],
+        "categoria": {
+            "nombre": "mantas",
+            "id": "mantas"
+        },
+        "precio": 120
+    },
+    {
+        "id": "manta-02",
+        "titulo": "Manta 02",
+        "imagen": "./img/Mantas/m02.png",
+        "imagenes": [
+            "./img/Mantas/m02.png",
+            "./img/Mantas/m02-02.png"
+        ],
+        "categoria": {
+            "nombre": "mantas",
+            "id": "mantas"
+        },
+        "precio": 120
+    },
+    {
+        "id": "manta-03",
+        "titulo": "Manta 03",
+        "imagen": "./img/Mantas/m03.png",
+        "imagenes": [
+            "./img/Mantas/m03.png",
+            "./img/Mantas/m03-03.png"
+        ],
+        "categoria": {
+            "nombre": "mantas",
+            "id": "mantas"
+        },
+        "precio": 120
+    },
+    {
+        "id": "manta-04",
+        "titulo": "Manta 04",
+        "imagen": "./img/Mantas/m04.png",
+        "imagenes": [
+            "./img/Mantas/m04.png",
+            "./img/Mantas/m04-04.png"
+        ],
+        "categoria": {
+            "nombre": "mantas",
+            "id": "mantas"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-01",
+        "titulo": "Poncho 01",
+        "imagen": "./img/Ponchos/01.png",
+        "imagenes": [
+            "./img/Ponchos/01.png",
+            "./img/Ponchos/01-01.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-02",
+        "titulo": "Poncho 02",
+        "imagen": "./img/Ponchos/02.png",
+        "imagenes": [
+            "./img/Ponchos/02.png",
+            "./img/Ponchos/02-02.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-03",
+        "titulo": "Poncho 03",
+        "imagen": "./img/Ponchos/03.png",
+        "imagenes": [
+            "./img/Ponchos/03.png",
+            "./img/Ponchos/03-03.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-04",
+        "titulo": "Poncho 04",
+        "imagen": "./img/Ponchos/p04.png",
+        "imagenes": [
+            "./img/Ponchos/p04.png",
+            "./img/Ponchos/p04-04.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-05",
+        "titulo": "Poncho 05",
+        "imagen": "./img/Ponchos/p05.png",
+        "imagenes": [
+            "./img/Ponchos/p05.png",
+            "./img/Ponchos/p05-05.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-06",
+        "titulo": "Poncho 06",
+        "imagen": "./img/Ponchos/p06.png",
+        "imagenes": [
+            "./img/Ponchos/p06.png",
+            "./img/Ponchos/p06-06.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-07",
+        "titulo": "Poncho 07",
+        "imagen": "./img/Ponchos/p07.png",
+        "imagenes": [
+            "./img/Ponchos/p07.png",
+            "./img/Ponchos/p07-07.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-08",
+        "titulo": "Poncho 08",
+        "imagen": "./img/Ponchos/p08.png",
+        "imagenes": [
+            "./img/Ponchos/p08.png",
+            "./img/Ponchos/p08-08.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-09",
+        "titulo": "Poncho 09",
+        "imagen": "./img/Ponchos/p09.png",
+        "imagenes": [
+            "./img/Ponchos/p09.png",
+            "./img/Ponchos/p09-09.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-10",
+        "titulo": "Poncho 10",
+        "imagen": "./img/Ponchos/p10.png",
+        "imagenes": [
+            "./img/Ponchos/p10.png",
+            "./img/Ponchos/p10-10.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-11",
+        "titulo": "Poncho 11",
+        "imagen": "./img/Ponchos/p11.png",
+        "imagenes": [
+            "./img/Ponchos/p11.png",
+            "./img/Ponchos/p11-11.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-12",
+        "titulo": "Poncho 12",
+        "imagen": "./img/Ponchos/p12.png",
+        "imagenes": [
+            "./img/Ponchos/p12.png",
+            "./img/Ponchos/p12-12.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-13",
+        "titulo": "Poncho 13",
+        "imagen": "./img/Ponchos/p13.png",
+        "imagenes": [
+            "./img/Ponchos/p13.png",
+            "./img/Ponchos/p13-13.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-14",
+        "titulo": "Poncho 14",
+        "imagen": "./img/Ponchos/p14.png",
+        "imagenes": [
+            "./img/Ponchos/p14.png",
+            "./img/Ponchos/p14-14.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-15",
+        "titulo": "Poncho 15",
+        "imagen": "./img/Ponchos/p15.png",
+        "imagenes": [
+            "./img/Ponchos/p15.png",
+            "./img/Ponchos/p15-15.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-16",
+        "titulo": "Poncho 16",
+        "imagen": "./img/Ponchos/p16.png",
+        "imagenes": [
+            "./img/Ponchos/p16.png",
+            "./img/Ponchos/p16-16.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "poncho-17",
+        "titulo": "Poncho 17",
+        "imagen": "./img/Ponchos/p17.png",
+        "imagenes": [
+            "./img/Ponchos/p17.png",
+            "./img/Ponchos/p17-17.png"
+        ],
+        "categoria": {
+            "nombre": "ponchos",
+            "id": "ponchos"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-01",
+        "titulo": "Poncho Capucha 01",
+        "imagen": "./img/PonchosCapucha/pc1.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc1.png",
+            "./img/PonchosCapucha/pc1-1.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-02",
+        "titulo": "Poncho Capucha 02",
+        "imagen": "./img/PonchosCapucha/pc2.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc2.png",
+            "./img/PonchosCapucha/pc02-02.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-03",
+        "titulo": "Poncho Capucha 03",
+        "imagen": "./img/PonchosCapucha/pc03.png",
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-04",
+        "titulo": "Poncho Capucha 04",
+        "imagen": "./img/PonchosCapucha/pc04.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc04.png",
+            "./img/PonchosCapucha/pc04-04.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-05",
+        "titulo": "Poncho Capucha 05",
+        "imagen": "./img/PonchosCapucha/pc05.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc05.png",
+            "./img/PonchosCapucha/pc05-05.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-06",
+        "titulo": "Poncho Capucha 06",
+        "imagen": "./img/PonchosCapucha/pc06.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc06.png",
+            "./img/PonchosCapucha/pc06-06.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-07",
+        "titulo": "Poncho Capucha 07",
+        "imagen": "./img/PonchosCapucha/pc07.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc07.png",
+            "./img/PonchosCapucha/pc07-07.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-08",
+        "titulo": "Poncho Capucha 08",
+        "imagen": "./img/PonchosCapucha/pc08.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc08.png",
+            "./img/PonchosCapucha/pc08-08.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-09",
+        "titulo": "Poncho Capucha 09",
+        "imagen": "./img/PonchosCapucha/pc09.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc09.png",
+            "./img/PonchosCapucha/pc09-09.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-10",
+        "titulo": "Poncho Capucha 10",
+        "imagen": "./img/PonchosCapucha/pc10.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc10.png",
+            "./img/PonchosCapucha/pc10-10.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-11",
+        "titulo": "Poncho Capucha 11",
+        "imagen": "./img/PonchosCapucha/pc11.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc11.png",
+            "./img/PonchosCapucha/pc11-11.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-12",
+        "titulo": "Poncho Capucha 12",
+        "imagen": "./img/PonchosCapucha/pc12.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc12.png",
+            "./img/PonchosCapucha/pc12-12.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-13",
+        "titulo": "Poncho Capucha 13",
+        "imagen": "./img/PonchosCapucha/pc13.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc13.png",
+            "./img/PonchosCapucha/pc13-13.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-14",
+        "titulo": "Poncho Capucha 14",
+        "imagen": "./img/PonchosCapucha/pc14.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc14.png",
+            "./img/PonchosCapucha/pc14-14.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchocap-15",
+        "titulo": "Poncho Capucha 15",
+        "imagen": "./img/PonchosCapucha/pc15.png",
+        "imagenes": [
+            "./img/PonchosCapucha/pc15.png",
+            "./img/PonchosCapucha/pc15-15.png"
+        ],
+        "categoria": {
+            "nombre": "ponchoscapucha",
+            "id": "ponchoscapucha"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchomuj-01",
+        "titulo": "Poncho Mujer 01",
+        "imagen": "./img/PonchosMujeres/pm01.png",
+        "imagenes": [
+            "./img/PonchosMujeres/pm01.png",
+            "./img/PonchosMujeres/pm01-01.png"
+        ],
+        "categoria": {
+            "nombre": "ponchosmujeres",
+            "id": "ponchosmujeres"
+        },
+        "precio": 120
+    },
+    {
+        "id": "ponchomuj-02",
+        "titulo": "Poncho Mujer 02",
+        "imagen": "./img/PonchosMujeres/pm02.png",
+        "imagenes": [
+            "./img/PonchosMujeres/pm02.png",
+            "./img/PonchosMujeres/pm02-02.png"
+        ],
+        "categoria": {
+            "nombre": "ponchosmujeres",
+            "id": "ponchosmujeres"
+        },
+        "precio": 120
+    },
+    {
+        "id": "souvenir-02",
+        "titulo": "Souvenir 02",
+        "imagen": "./img/Souvenir/s02.png",
+        "categoria": {
+            "nombre": "souvenir",
+            "id": "souvenir"
+        },
+        "precio": 120
+    },
+    {
+        "id": "souvenir-03",
+        "titulo": "Souvenir 03",
+        "imagen": "./img/Souvenir/s03.png",
+        "categoria": {
+            "nombre": "souvenir",
+            "id": "souvenir"
+        },
+        "precio": 120
+    },
+    {
+        "id": "souvenir-04",
+        "titulo": "Souvenir 04",
+        "imagen": "./img/Souvenir/s04.png",
+        "categoria": {
+            "nombre": "souvenir",
+            "id": "souvenir"
+        },
+        "precio": 120
+    },
+    {
+        "id": "souvenir-05",
+        "titulo": "Souvenir 05",
+        "imagen": "./img/Souvenir/s05.png",
+        "categoria": {
+            "nombre": "souvenir",
+            "id": "souvenir"
+        },
+        "precio": 120
+    },
+    {
+        "id": "souvenir-06",
+        "titulo": "Souvenir 06",
+        "imagen": "./img/Souvenir/s06.png",
+        "categoria": {
+            "nombre": "souvenir",
+            "id": "souvenir"
+        },
+        "precio": 120
+    },
+    {
+        "id": "tapete-01",
+        "titulo": "Tapete 01",
+        "imagen": "./img/Tapetes/t01.png",
+        "imagenes": [
+            "./img/Tapetes/t01.png",
+            "./img/Tapetes/t01-01.png"
+        ],
+        "categoria": {
+            "nombre": "tapetes",
+            "id": "tapetes"
+        },
+        "precio": 120
     }
 ]
