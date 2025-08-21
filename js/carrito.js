@@ -1,3 +1,8 @@
+// ====== Configuración de WhatsApp ======
+const STORE_NAME     = "HvitserkShop";
+const WHATSAPP_PHONE = "51971124768"; // <-- TU NÚMERO con código de país, sin + ni espacios
+const CURRENCY       = "$";
+
 // ====== Estado & elementos ======
 let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
 
@@ -10,6 +15,47 @@ const numerito            = document.querySelector("#numerito");
 const btnVaciar   = document.querySelector("#carrito-acciones-vaciar");
 const totalSpan   = document.querySelector("#total");
 const btnComprar  = document.querySelector("#carrito-acciones-comprar");
+
+// ====== Utilidades ======
+function persistir() {
+  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+function actualizarNumerito() {
+  const n = productosEnCarrito.reduce((acc, p) => acc + (p.cantidad || 0), 0);
+  numerito && (numerito.innerText = n);
+}
+
+function totalCarrito() {
+  return productosEnCarrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
+}
+
+// Arma el mensaje para WhatsApp
+function buildWhatsAppMessage() {
+  const encabezado = `*Pedido - ${STORE_NAME}*`;
+  const items = productosEnCarrito.map((p, i) =>
+    `${i + 1}. *${p.titulo}*` +
+    `${p.talla ? `  |  Talla: ${p.talla}` : ""}` +
+    `  |  Cant: ${p.cantidad}  |  ${CURRENCY}${p.precio} c/u  =  ${CURRENCY}${p.precio * p.cantidad}`
+  ).join("\n");
+
+  const tot = `${CURRENCY}${totalCarrito()}`;
+
+  const facturacion = [
+    "",
+    "*Datos de facturación/envío:*",
+    "Nombre:",
+    "Documento (DNI/RUC):",
+    "Teléfono:",
+    "Dirección:",
+    "Referencia:",
+    "Método de pago: Efectivo/Transferencia/Yape/Plin",
+  ].join("\n");
+
+  const gracias = "\nGracias por su compra 🙌";
+
+  return [encabezado, "", items, "", `*Total:* ${tot}`, "", facturacion, gracias].join("\n");
+}
 
 // ====== Render ======
 function cargarProductosCarrito() {
@@ -48,11 +94,11 @@ function cargarProductosCarrito() {
       </div>
       <div class="carrito-producto-precio">
         <small>Precio</small>
-        <p>$${p.precio}</p>
+        <p>${CURRENCY}${p.precio}</p>
       </div>
       <div class="carrito-producto-subtotal">
         <small>Subtotal</small>
-        <p>$${p.precio * p.cantidad}</p>
+        <p>${CURRENCY}${p.precio * p.cantidad}</p>
       </div>
       <button class="carrito-producto-eliminar" title="Eliminar" data-id="${p.id}" data-talla="${p.talla || ''}">
         <i class="bi bi-trash"></i>
@@ -73,20 +119,11 @@ function cargarProductosCarrito() {
   });
 
   // Total
-  const total = productosEnCarrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
-  if (totalSpan) totalSpan.innerText = `$${total}`;
+  if (totalSpan) totalSpan.innerText = `${CURRENCY}${totalCarrito()}`;
   actualizarNumerito();
 }
 
-function actualizarNumerito() {
-  const n = productosEnCarrito.reduce((acc, p) => acc + (p.cantidad || 0), 0);
-  numerito && (numerito.innerText = n);
-}
-
-function persistir() {
-  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-}
-
+// ====== Acciones ======
 // Vaciar
 btnVaciar?.addEventListener("click", () => {
   productosEnCarrito = [];
@@ -94,16 +131,23 @@ btnVaciar?.addEventListener("click", () => {
   cargarProductosCarrito();
 });
 
-// Comprar (simple)
+// Comprar → WhatsApp
 btnComprar?.addEventListener("click", () => {
-  productosEnCarrito = [];
-  persistir();
+  if (!productosEnCarrito.length) {
+    alert("Tu carrito está vacío.");
+    return;
+  }
 
-  contenedorVacio?.classList.add("disabled");
-  contenedorProductos?.classList.add("disabled");
-  contenedorAcciones?.classList.add("disabled");
-  contenedorComprado?.classList.remove("disabled");
-  actualizarNumerito();
+  const message = buildWhatsAppMessage();
+  const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+
+  // Si quieres vaciar el carrito automáticamente después de abrir WhatsApp,
+  // descomenta estas 4 líneas:
+  // productosEnCarrito = [];
+  // persistir();
+  // cargarProductosCarrito();
+  // (así evitas duplicados si el cliente vuelve atrás)
 });
 
 // Init
