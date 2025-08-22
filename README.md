@@ -47,10 +47,6 @@ Permite a los usuarios explorar productos, agregarlos al carrito y finalizar la 
 ┣ 📜 carrito.html # Carrito de compras
 ┣ 📜 README.md
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## 🖥️ Instalación y uso
