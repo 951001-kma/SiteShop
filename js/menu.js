@@ -29,3 +29,4 @@
   // (Opcional) abrir automáticamente al cargar en pantallas pequeñas
   // if (window.matchMedia("(max-width: 600px)").matches) toggle(true);
 })();
+
